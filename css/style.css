@@ -90,11 +90,24 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .hot-topic .content {
+  position: relative;
   float: left;
   width: 50%;
   height: 100%;
   padding: 105px 25px 0;
   background-color: #2d3d54;
+  line-height: 1.6;
+}
+
+.hot-topic .title {
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: normal;
+  font-size: 2.0rem;
+}
+
+.hot-topic .desc {
+  color: #ddc;
 }
 
 .hidden {
