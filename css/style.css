@@ -22,6 +22,30 @@ a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
+/*-------------------------------------
+parts
+--------------------------------------*/
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.heading {
+  padding: 10px 12px;
+  background: url(../images/bg-slash.gif);
+  letter-spacing: 1px;
+  font-size: 1.6rem;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/*-------------------------------------
+header
+--------------------------------------*/
 .header {
   width: 100%;
   padding: 28px 0 10px;
@@ -74,12 +98,31 @@ a:link, a:visited, a:hover, a:active {
   color: #fff;
 }
 
+
+
 .hot-topic {
   display: block;
   height: 300px;
   margin-bottom: 30px;
   box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.15);
   transition: opacity 0.15s;
+}
+
+/*----------------------------------
+wrapper
+------------------------------------*/
+.wrapper {
+  width: 970px;
+  margin: 30px auto 40px;
+}
+
+/*-----------------------------
+main
+-------------------------------*/
+.main {
+  display: block;
+  float: left;
+  width: 660px;
 }
 
 .hot-topic:hover {
@@ -129,15 +172,8 @@ a:link, a:visited, a:hover, a:active {
   line-height: 1;
 }
 
-.heading {
-  padding: 10px 12px;
-  background: url(../images/bg-slash.gif);
-  letter-spacing: 1px;
-  font-size: 1.6rem;
-}
-
 .scroll-list {
-  max-height: 22opx;
+  max-height: 220px;
   overflow-y: auto;
   margin-bottom: 30px;
   list-style-type: none;
@@ -233,6 +269,15 @@ a:link, a:visited, a:hover, a:active {
   width: 100%;
 }
 
+
+/*--------------------------
+Sidemenu
+----------------------------*/
+.sidemenu {
+  float: right;
+  width: 275px;
+}
+
 .ranking {
   margin-bottom: 30px;
   list-style-type: none;
@@ -308,32 +353,76 @@ a:link, a:visited, a:hover, a:active {
   transform: rotate(45deg);
 }
 
-.hidden {
-  display: none;
+.documents {
+  margin: 10px 10px 30px;
 }
 
-.wrapper {
-  width: 970px;
-  margin: 30px auto 40px;
+.documents,
+.documents ul {
+  list-style-type: none;
 }
 
-.main {
-  display: block;
-  float: left;
-  width: 660px;
+.documents > li .title {
+  margin: 15px 0;
+  padding-left: 8px;
+  border-left: 5px solid #d03c56;
+  font-size: 1.4rem;
+  line-height: 1.2;
 }
 
-.sidemenu {
-  float: right;
-  width: 275px;
+.documents > li + li {
+  margin-top: 25px;
 }
+
+.documents > li ul {
+  margin: 15px;
+}
+
+.documents > li ul > li {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  background: url('../images/arrow.gif') no-repeat left center;
+}
+
+.documents a:hover {
+  text-decoration: underline;
+}
+
+.search-box {
+  padding: 15px;
+  background-color: #CCC;
+  font-size: 0;
+}
+
+.seach-box > * {
+  font-size: 1.2rem;
+}
+
+.seach-box .search-input {
+  width: 205px;
+  height: 26px;
+  padding: 0 10px;
+  border: none;
+}
+
+.search-box .search-button {
+  width: 40px;
+  height: 26px;
+  border: none;
+  background-color: #d03c56;
+  color: #fff;
+  cursor: pointer;
+}
+
+.search-box .text {
+  margin-top: 12px;
+}
+
+/*------------------------------
+footer
+--------------------------------*/
 
 .footer {
   width: 100%;
-}
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
 }
 
