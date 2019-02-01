@@ -144,6 +144,7 @@ a:link, a:visited, a:hover, a:active {
   display: block;
   padding: 10px 15px;
   color: #333;
+  font-size: 0;
   transition: background-color 0.1s;
 }
 
@@ -153,6 +154,34 @@ a:link, a:visited, a:hover, a:active {
 
 .scroll-list .scroll-item a:hover {
   background-color: #fafaf8;
+}
+
+.scroll-list .date {
+  display: inline-block;
+  width: 19%;
+  font-size: 1.0rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1.0rem;
+}
+
+.scroll-list .category {
+  display: inline-block;
+  width: 8%;
+  border-radius: 5px;
+  background-color: #d03c56;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 16px;
+  font-size: 1.0rem;
+}
+
+.scroll-list .title {
+  display: inline-block;
+  width: 73%;
+  padding-left: 15px;
+  font-size: 1.0rem;
 }
 
 .hidden {
