@@ -98,16 +98,6 @@ header
   color: #fff;
 }
 
-
-
-.hot-topic {
-  display: block;
-  height: 300px;
-  margin-bottom: 30px;
-  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.15);
-  transition: opacity 0.15s;
-}
-
 /*----------------------------------
 wrapper
 ------------------------------------*/
@@ -123,6 +113,14 @@ main
   display: block;
   float: left;
   width: 660px;
+}
+
+.hot-topic {
+  display: block;
+  height: 300px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.15s;
 }
 
 .hot-topic:hover {
@@ -231,20 +229,40 @@ main
 }
 
 .article-box {
+  position: relative;
   display: block;
   width: 315px;
   margin-bottom: 30px;
+  padding: 210px 15px 0;
+  box-shadow: 6px 6px 8px -4px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.15s;
 }
 
 .article-box:hover {
   opacity: 0.8;
+}
 
 .article-box:nth-of-type(odd) {
-  float: left;
+  float: right;
 }
 
 .article-box:nth-of-type(even) {
   float: right;
+}
+
+.article-box .title {
+  margin-top: 30px;
+  color: #555;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.article-box .desc {
+  margin-top: 5px;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .article-box .date {
@@ -297,14 +315,9 @@ Sidemenu
 .ranking .ranking-item a:hover {
   opacity: 0.8;
 }
-
-.ranking .text {
-  display: inline-block;
-  width: 182px;
-  color: #000;
-  vertical-align: top;
-  font-size: 1.2rem;
-  line-height: 1.5;
+.ranking .image {
+  width: 55px;
+  height: 55px;
 }
 
 .ranking .order {
@@ -313,10 +326,21 @@ Sidemenu
   height: 18px
   margin: 0 10px;
   border: 1px solid #CCC;
+  color: #aaa;
   vertical-align: 20px;
-  text-align: 20px;
+  text-align: center;
   font-weight: bold;
   line-height: 16px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.ranking .order::before {
+  content: counter(ranking);
+  display: inline-block;
+  counter-increment: ranking;
+  font-size: 1.0rem;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -341,6 +365,15 @@ Sidemenu
 
 .ranking .ranking-item:nth-of-type(1) .order {
   background-color: #a0541a;
+}
+
+.ranking .text {
+  display: inline-block;
+  width: 182px;
+  color: #000;
+  vertical-align: top;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 .ranking .order::before {
