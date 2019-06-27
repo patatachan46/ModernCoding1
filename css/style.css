@@ -117,7 +117,7 @@ main
 
 .hot-topic {
   display: block;
-  height: 300px;
+  height: 400px;
   margin-bottom: 30px;
   box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.15);
   transition: opacity 0.15s;
